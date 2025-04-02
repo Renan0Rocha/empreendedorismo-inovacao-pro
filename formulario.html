@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Compartilhe sua Ideia</title>
+  <link rel="stylesheet" href="styles/form.css"/>
+</head>
+<body>
+  <header></header>
+
+  <main>
+    <h1>Compartilhe sua ideia inovadora</h1>
+    <form id="ideaForm">
+      <label>Nome:<input type="text" name="nome" required /></label>
+      <label>Email:<input type="email" name="email" required /></label>
+      <label>Data:<input type="date" name="data" required /></label>
+
+      <label>Tipo de ideia:
+        <select name="tipo" required>
+          <option value="">Selecione</option>
+          <option value="produto">Produto</option>
+          <option value="serviço">Serviço</option>
+          <option value="social">Social</option>
+        </select>
+      </label>
+
+      <fieldset>
+        <legend>Grau de inovação:</legend>
+        <label><input type="radio" name="grau" value="baixa" required/> Baixa</label>
+        <label><input type="radio" name="grau" value="media" required/> Média</label>
+        <label><input type="radio" name="grau" value="alta" required/> Alta</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Áreas de impacto:</legend>
+        <label><input type="checkbox" name="area" value="educação" required/> Educação</label>
+        <label><input type="checkbox" name="area" value="saúde" /> Saúde</label>
+        <label><input type="checkbox" name="area" value="meio ambiente" /> Meio Ambiente</label>
+      </fieldset>
+
+      <label>Descrição:<textarea name="descricao" required></textarea></label>
+      <button type="submit">Enviar Ideia</button>
+    </form>
+
+    <div id="resultado"></div>
+  </main>
+
+  <footer></footer>
+
+  <script src="src/js/loadComponents.js"></script>
+  <script src="src/js/form.js"></script>
+</body>
+</html>
